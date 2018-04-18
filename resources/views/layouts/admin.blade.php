@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') . ' - Admin' }}</title>
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        @include('layouts._nav')
+        @include('layouts.admin._nav')
 
         <main class="py-4">
             @yield('content')
